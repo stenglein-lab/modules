@@ -1,0 +1,5 @@
+#!/bin/bash 
+
+nextflow run main.nf -profile local,singularity --fastq_dir ../2023_1_OC_datasets/concatenated_datasets_R1_only,../2023_1_OC_datasets/2023_4_Lexi_dried_samples,../2023_2_Lexi_OC_repo/sra_datasets/fastq  --fastq_pattern "*_R[1]*.fastq*" -resume --fastq_out_dir ./trimmed_fastq_R1_only  --fastq_out_dedup_dir ./trimmed_fastq_R1_only_deduplicated --collapse_duplicate_reads
+
+
